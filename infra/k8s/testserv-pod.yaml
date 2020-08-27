@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testserv
+spec:
+  containers: 
+    - name: testserv
+      image: services4amit/testservice:0.0.5
+
+

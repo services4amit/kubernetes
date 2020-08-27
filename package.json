@@ -1,0 +1,38 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Automation Development application",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/**.spec.js --timeout=5000",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --timeout 5000 ./test/**.spec.js",
+    "server": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^16.1.7",
+    "axios": "^0.19.2",
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "cron": "^1.6.0",
+    "express": "^4.16.4",
+    "istanbul": "^1.1.0-alpha.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.0.2",
+    "mockgoose": "^8.0.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.4.19",
+    "mssql": "^5.1.0",
+    "mysql": "^2.17.1",
+    "nock": "^10.0.6",
+    "q": "^1.5.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "sinon": "^7.3.1"
+  }
+}

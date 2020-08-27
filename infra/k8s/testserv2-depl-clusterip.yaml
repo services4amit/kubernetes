@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testserv2-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testserv
+  template:
+    metadata:
+      labels:
+        app: testserv
+    spec: 
+      containers:
+        - name: testserv
+          image: services4amit/testservice:0.0.5
+
+---
+apiVersion: v1 
+kind: Service
+metadata:
+  name: testserv2-clusterip
+spec:
+  selector:
+    app: testserv
+  ports:
+    - name: testserv2
+      protocol: TCP 
+      port: 8099
+      targetPort: 8099

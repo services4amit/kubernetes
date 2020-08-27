@@ -1,0 +1,17 @@
+kubernetes: dev: Docker for windows
+            prod: Managed solutions: EKS, GKE , Openshift
+
+
+Steps:
+Image created and pushed to dockerhub
+One config file to create POD 
+One config file to set up networking
+
+
+--
+kubectl describe pod client-pod
+
+kubectl get pods -o wide
+
+-- to upadte new image build
+kubectl set image deployment/client-deployment client=services4amit/testservice:0.0.5

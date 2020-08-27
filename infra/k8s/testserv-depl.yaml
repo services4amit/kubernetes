@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testserv-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testserv
+  template:
+    metadata:
+      labels:
+        app: testserv
+    spec: 
+      containers:
+        - name: testserv
+          image: testservice:latest
