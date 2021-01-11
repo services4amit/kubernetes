@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest-api-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rest-api
+  template:
+    metadata:
+      labels:
+        app: rest-api
+    spec: 
+      containers:
+        - name: rest-api
+          image: services4amit/rest-api
+
+---
+apiVersion: v1 
+kind: Service
+metadata:
+  name: rest-api-clusterip
+spec:
+  selector:
+    app: rest-api
+  ports:
+    - name: rest-api
+      protocol: TCP 
+      port: 3002
+      targetPort: 3002

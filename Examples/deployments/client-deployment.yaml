@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: client-deployment
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      component: web-depl
+  template:
+    metadata:
+      labels:
+        component: web-depl
+    spec:
+      containers:
+        - name: client
+          image: services4amit/testservice:0.0.5
+          ports:
+            - containerPort: 8099  

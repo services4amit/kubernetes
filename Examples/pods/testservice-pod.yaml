@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:   
+  name: testservice-pod
+  labels:
+    component: testservice-pod
+spec:
+  containers:
+    - name: client
+      image: services4amit/testservice:0.0.5
+      ports:
+        - containerPort: 8099
