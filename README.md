@@ -15,8 +15,8 @@
 11.	Persistent volume claim for postgresql volume
 12.	Pgadmin installation in k8s.
 
-
-
+--------------------------------------------------
+## Notes:
 
 
 Docket build with tag:
