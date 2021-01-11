@@ -1,6 +1,19 @@
 # kubernetes
 
 
+# Topics Covered
+1.	Docker file 
+2.	Docker image creation
+3.	Image pushed to Dockerhub
+4.	Creating pod from images
+5.	Expose the pod through service (Nodeport,cluster-ip)
+6.	Creating deployment for easy replication of pods and etc
+7.	Configure deployments to service (Nodeport,cluster-ip)
+8.	Ingress controller for exposing cluster-ip services to outside
+9.	React and backend application routing using ingress.
+10.	Postgresql installation
+11.	Persistent volume claim for postgresql volume
+12.	Pgadmin installation in k8s.
 
 
 
